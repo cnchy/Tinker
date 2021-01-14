@@ -777,7 +777,7 @@ function BootsMouse()
 end
 
 function BlinkToBase()
-    local abilityBlink = NPC.GetItem(Tinker.Hero, "item_blink", true)
+    local abilityBlink = NPC.GetItem(Tinker.Hero, "item_blink", true)  or NPC.GetItem(Tinker.Hero, "item_arcane_blink", false) or NPC.GetItem(Tinker.Hero, "item_overwhelming_blink", false) or NPC.GetItem(Tinker.Hero, "item_swift_blink", false)
 	if	abilityBlink 
 		and Ability.IsCastable(abilityBlink, Tinker.ManaPoint)
 		and Tinker.LastCastAbility ~= abilityBlink
@@ -799,7 +799,7 @@ function BlinkToBase()
 end
 
 function BlinkToMouse()
-    local abilityBlink = NPC.GetItem(Tinker.Hero, "item_blink", true)
+    local abilityBlink = NPC.GetItem(Tinker.Hero, "item_blink", true)  or NPC.GetItem(Tinker.Hero, "item_arcane_blink", false) or NPC.GetItem(Tinker.Hero, "item_overwhelming_blink", false) or NPC.GetItem(Tinker.Hero, "item_swift_blink", false)
 	if	abilityBlink 
 		and Ability.IsCastable(abilityBlink, Tinker.ManaPoint)
 		and Tinker.LastCastAbility ~= abilityBlink
@@ -1034,7 +1034,7 @@ function Rearm()
 end
 
 function SafeTP()
-    local abilityBlink = NPC.GetItem(Tinker.Hero, "item_blink", true)
+    local abilityBlink = NPC.GetItem(Tinker.Hero, "item_blink", true)  or NPC.GetItem(Tinker.Hero, "item_arcane_blink", false) or NPC.GetItem(Tinker.Hero, "item_overwhelming_blink", false) or NPC.GetItem(Tinker.Hero, "item_swift_blink", false)
 	if	abilityBlink 
 		and Ability.IsCastable(abilityBlink, Tinker.ManaPoint)
 		and Tinker.LastCastAbility ~= abilityBlink
